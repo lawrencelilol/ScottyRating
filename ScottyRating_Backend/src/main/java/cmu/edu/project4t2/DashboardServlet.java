@@ -35,10 +35,7 @@ public class DashboardServlet extends HttpServlet {
     public void init() {
         // Connect to MongoDB
         // creat the personalized connection string
-        String s = "mongodb://lawrencelilol:LL2619970206ltt@cluster0-shard-00-02.lswpu.mongodb.net:27017," +
-                " cluster0-shard-00-01.lswpu.mongodb.net:27017," +
-                "cluster0-shard-00-00.lswpu.mongodb.net:27017" +
-                "/AndroidDB?w=majority&retryWrites=true&tls=true&authMechanism=SCRAM-SHA-1";
+        String s = "<connection string>"
         // set up the setting to connect with MongoDB
         ConnectionString connectionString = new ConnectionString(s);
         MongoClientSettings settings = MongoClientSettings.builder()

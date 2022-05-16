@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:src="@drawable/scotty"/>
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter a CMU Course ID" />
+
+    <EditText
+        android:id="@+id/searchID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:singleLine="true"
+        android:textColor="#000" />
+    <Button
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/courseID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Searched Course ID"
+        android:textSize="24dp"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/respectView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate for respect to students" />
+
+    <RatingBar
+        android:id="@+id/respectRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.01"
+        android:theme="@style/RatingBar"
+        android:isIndicator="true"/>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/teachingView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate for teaching" />
+
+    <RatingBar
+        android:id="@+id/teachingRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:theme="@style/RatingBar"
+        android:stepSize="0.01" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/courseView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate for the overall course" />
+
+    <RatingBar
+        android:id="@+id/courseRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.01"
+        android:theme="@style/RatingBar"
+        android:isIndicator="true"/>
+
+</LinearLayout>

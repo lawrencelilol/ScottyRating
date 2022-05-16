@@ -10,9 +10,7 @@ Develop App for students to search course ratings in the past and help students 
 
 ![image](https://user-images.githubusercontent.com/35508198/168653518-1a766bf1-e379-485f-b44a-cea5e2c7da07.png)
 
-## Part 1:
-
-Moblie to Cloud Application:
+## Part 1: Mobile to Cloud Application
 
 <img width="1009" alt="image" src="https://user-images.githubusercontent.com/35508198/168653885-c744fb0e-bf38-4833-903c-180e6c6d1087.png">
 
@@ -60,24 +58,23 @@ Here is the screenshot after the course rating has been returned.
 <img width="216" alt="image" src="https://user-images.githubusercontent.com/35508198/168654995-5e9ead68-e398-4818-80ff-f7f20f2fe5d2.png">
 
 
-#### 2. Implement a web service, deployed to Heroku
+#### 1.6. Implement a web service, deployed to Heroku
 The URL of my web service deployed to Heroku is:
 
 sleepy-basin-06882
 
 
-#### 2.1. Implement a simple (can be a single path) API.
+#### 1.7. Implement a simple (can be a single path) API.
 In my web app project:
 Model: ClassFinderModel.java
 View: result.jsp
 Controller: ClassFinderServlet.java
 
 
-#### 2.2 Receives an HTTP request from the native Android application
+#### 1.8. Receives an HTTP request from the native Android application
 ClassFinderModel.java receives the HTTP GET request with the argument “class-id”. It passes this search string onto the model with the doClassSearch function.
 
-
-#### 2.3 Executes business logic appropriate to your application
+#### 1.9. Executes business logic appropriate to your application
 
 ClassFinderModel.java makes an HTTP GET request to:
 
@@ -88,7 +85,7 @@ ClassFinderModel.java makes an HTTP GET request to:
 It then parses the JSON response and extracts the parts it needs to respond to the Android application.
 
 
-#### 2.4.  Replies to the Android application with an XML or JSON formatted response. 
+#### 1.10.  Replies to the Android application with an XML or JSON formatted response. 
 
 The formatted response to the mobile application in a JSON format of my own design.
 
@@ -98,6 +95,41 @@ It includes the rating for the searched courses:
 0. Show respect for all students
 1. Overall teaching rate
 2. Overall course rate
+
+## Part 2: Web Service Logging and Analysis Dashboard
+
+Description: 
+
+The task is built on Project 4 Task 1. Web service adds logging, analysis, and reporting capabilities. In other words, it is a web-based dashboard to the web service that will display information about how the web service is being used. This will be a web-page interface designed for laptops or desktop browsers, not for mobile. In order to display logging and analytical data, I store the log data in MongoDB, a database hosted in the cloud.
+
+
+<img width="875" alt="image" src="https://user-images.githubusercontent.com/35508198/168655997-9bfad4d4-b2a0-4d9b-945a-fca911e4b5d7.png">
+
+#### 2.1. Log useful information
+
+<img width="707" alt="image" src="https://user-images.githubusercontent.com/35508198/168656189-0a0aa38b-1955-4a37-a82b-739f8565e95b.png">
+
+Here is the dashboard keeping track of the log information. It includes the
+1. user device
+2. the course id they have searched,
+3. the response sends back the android user
+4. the request the web service sends to the API
+5. the time the web receives the request 
+6. the processing time for each API request
+
+
+It also includes the Operation Analytics
+Average latency time for searching a course in milliseconds
+The top 2 devices make requests on the web service
+The top 3 courses searched the most on the web service
+
+#### 2.2. Use MongoDB to store user logs
+
+<img width="822" alt="image" src="https://user-images.githubusercontent.com/35508198/168656403-a0472ac2-9ddc-4259-8035-0abefacd9e71.png">
+
+
+
+
 
 
 
